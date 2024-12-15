@@ -1,0 +1,14 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%; /* Ensure it spans the full width */
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #fff;
+  }
+  .dady{
+    background-color:transparent;
+    ;
+  }

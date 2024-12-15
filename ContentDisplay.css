@@ -1,0 +1,83 @@
+/* Container for the page */
+.buypage {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #426e85ad;
+
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .buypagehead {
+    font-size: 2em;
+    margin-bottom: 0px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0px;
+    border: 2px solid #5874a87a;
+
+    border-radius: 5px;
+  }
+  
+  th, td {
+    padding: 15px;
+    text-align: left;
+    border: 2px solid #5874a87a;
+    font-size: 1em;
+    border-radius: 5px;
+    
+  }
+  
+  th {
+    background-color: #c8d9f3;
+    color: black;
+    font-weight: 600;
+  }
+  
+  td {
+  background-color: #faf9f9;
+  border-radius: 5px;
+  color: rgb(46, 38, 38);
+  }
+  
+  /* Row hover effect */
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Buy button styling */
+  .buttonmains {
+    display: block;
+    width: 20%;
+    padding: 12px;
+    margin-top: 2px;
+    margin-left: 500px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buttonmain:hover {
+    background-color:  #0066ff;
+    color: black;
+  }
+  
+  .buttonmain:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

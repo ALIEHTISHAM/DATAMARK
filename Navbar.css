@@ -1,0 +1,153 @@
+/* Message.css */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #000000;
+  color: white;
+  flex-wrap: wrap;
+  position: relative; /* Added for positioning of menu toggle */
+  border-bottom: 1px;
+  border-bottom-color: white;
+  border-bottom-style:solid;
+}
+
+.navbar-logo img {
+  height: 40px;
+}
+
+.navbar-buttons {
+  display: flex;
+  gap: 130px; /* Adjusted for spacing between buttons */
+  justify-content: center;
+  flex: 1;
+}
+
+.navbar-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+  padding: 5px 10px; /* Adjust padding for better spacing */
+}
+
+.navbar-button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px; /* Border width */
+  height: 100%; /* Border height */
+  background: rgb(255, 255, 255); /* Border color */
+}
+
+.navbar-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: rgb(255, 255, 255); /* Initial color for the line */
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.navbar-button:hover::after {
+  width: 100%;
+  background: rgb(53, 130, 202); /* Color on hover */
+}
+
+.navbar-login {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Pushes login button to the extreme right */
+}
+
+.navbar-login-button {
+  padding: 5px 10px;
+  background-color: rgba(68, 68, 68, 0.8); /* Translucent background */
+  border-radius: 4px;
+  color: white;
+  display: block; /* Ensure login button is visible */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .navbar-buttons {
+    display: none; /* Hide buttons on smaller screens */
+  }
+
+  .navbar-login {
+    display: none; /* Hide login button on smaller screens */
+  }
+
+  .navbar-menu-toggle {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 10px; /* Space between menu button and logo */
+    align-self: center; /* Center align with logo */
+  }
+
+  .navbar-buttons.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    right: 0; /* Align to right side */
+    background-color: #333;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px; /* Adjust width as needed */
+    z-index: 10; /* Ensure it appears above other elements */
+  }
+
+  .navbar-buttons.open #login-signup-menu {
+    display: block; /* Show login button inside the menu */
+  }
+
+  .navbar-search-container {
+    display: none; /* Hide search bar container on smaller screens */
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar-menu-toggle {
+    display: none; /* Hide menu button on larger screens */
+  }
+
+  .navbar-buttons {
+    display: flex; /* Ensure buttons are visible */
+  }
+
+  .navbar-login {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Pushes login button to the extreme right */
+  }
+
+  .navbar-login-button {
+    display: block; /* Ensure login button is visible */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-logo img {
+    height: 30px;
+  }
+
+  .navbar-button {
+    font-size: 14px;
+  }
+}
